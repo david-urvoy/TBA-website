@@ -11,8 +11,7 @@
   align-items: center;
   height: 100vh;
   background: url('../public/images/TBA.jpg') center no-repeat;
-  background-size: 500px;
-  filter: blur(2px);
+  background-size: min(500px, 80%);
   animation: pulse 2s linear infinite;
 }
 
