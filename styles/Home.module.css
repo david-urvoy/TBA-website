@@ -1,37 +1,37 @@
 .main {
-  background-color: black;
+    background-color: black;
 }
 
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: url('../public/images/TBA.jpg') center no-repeat;
-  background-size: min(500px, 80%);
-  animation: pulse 2s linear infinite;
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../public/images/TBA.jpg') center no-repeat;
+    background-size: min(500px, 80%);
+    animation: pulse 3s linear infinite;
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale( .95);
-  }
-  20% {
-    transform: scale( 1);
-  }
-  40% {
-    transform: scale( .95);
-  }
-  60% {
-    transform: scale( 1);
-  }
-  80% {
-    transform: scale( .95);
-  }
-  100% {
-    transform: scale( .95);
-  }
+    0% {
+        transform: scale(.9);
+    }
+    80% {
+        transform: scale(.9);
+    }
+    85% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(.9);
+    }
+    95% {
+        transform: scale(.95);
+    }
+    100% {
+        transform: scale(.9);
+    }
 }
