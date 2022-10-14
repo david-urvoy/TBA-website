@@ -29,13 +29,13 @@ export default function ConnectionButton() {
 			Promise.all(
 				[
 					axios.get(tokenUrl, {headers: {authorization: `${tokenType} ${accessToken}`}}),
-					axios.get("https://brain-academy.fr/api/users")
+					// axios.get("https://brain-academy.fr/api/users")
 				]
 			)
-				.then(([{data}, {data: users}]) => {
-					const user = users.find(({name}) => name === data.username)
-					setConnectedUser(user)
-				})
+				// .then(([{data}, {data: users}]) => {
+				// 	const user = users.find(({name}) => name === data.username)
+				// 	setConnectedUser(user)
+				// })
 				.then(() => notify({title: "Connexion réussie !"}))
 				.catch(() => notify({title: "Connexion échouée...", status: "error"}))
 				.catch(console.error)
