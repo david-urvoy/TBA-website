@@ -1,10 +1,10 @@
 import {Drawer, DrawerBody, DrawerContent, DrawerOverlay, Grid, GridItem, Stack, Switch, useColorMode} from "@chakra-ui/react"
 import React, {useContext} from "react"
 import theme from "../../../styles/theme"
-import {ConnectedUserContext} from "../../context/connected-user-context"
-import navigationItems from "../../navigation-items"
-import SidebarCard from "./sidebar-card/sidebar-card"
-import SidebarItem from "./sidebar-item/sidebar-item"
+import {ConnectedUserContext} from "../../context/ConnectedUserContext"
+import navigationItems from "../../NavigationItems"
+import SidebarCard from "./sidebar-card/SidebarCard"
+import SidebarItem from "./sidebar-item/SidebarItem"
 
 export default function Sidebar(props) {
 	const {colorMode, toggleColorMode} = useColorMode()

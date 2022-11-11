@@ -1,4 +1,4 @@
-import {ArrowBackIcon, CalendarIcon, ChatIcon, EditIcon, StarIcon} from "@chakra-ui/icons"
+import { ArrowBackIcon, CalendarIcon, ChatIcon, EditIcon, StarIcon } from "@chakra-ui/icons"
 import React from "react"
 import User from "./domain/user"
 
@@ -38,11 +38,11 @@ function navigationItems(user?: User): NavigationItem[] {
 			requiredRoles: ["Admin-Mordred"]
 		}
 	]
-		.filter(({requiredRoles}) => !!requiredRoles ?
-			requiredRoles.some(requiredRole => user?.roles.map(({name}) => name)
-				.includes(requiredRole))
-			: true
-		)
+		// .filter(({ requiredRoles }) => !!requiredRoles ?
+		// 	requiredRoles.some(requiredRole => user?.roles.map(({ name }) => name)
+		// 		.includes(requiredRole))
+		// 	: true
+		// )
 
 }
 

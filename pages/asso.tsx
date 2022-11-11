@@ -3,9 +3,9 @@ import axios from "axios"
 import {User} from "discord.js"
 import React, {useContext} from "react"
 import {FaHeart, FaStar} from "react-icons/fa"
-import ButtonLink from "../src/components/button-link"
-import MemberList from "../src/components/tile/member-list"
-import {ConnectedUserContext} from "../src/context/connected-user-context"
+import ButtonLink from "../src/components/ButtonLink"
+import MemberList from "../src/components/tile/MemberList"
+import {ConnectedUserContext} from "../src/context/ConnectedUserContext"
 
 export async function getServerSideProps() {
 	const res = await axios.get("http://brain-academy.fr:3001/users")

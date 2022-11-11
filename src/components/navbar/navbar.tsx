@@ -1,7 +1,7 @@
 import {HamburgerIcon} from '@chakra-ui/icons'
 import {Flex, Spacer} from '@chakra-ui/react'
 import {default as React} from 'react'
-import ToolsMenu from './tools-menu/tools-menu'
+import ToolsMenu from './tools-menu/ToolsMenu'
 
 export default function Navbar(props: {toggleSidebar: () => void}) {
 
