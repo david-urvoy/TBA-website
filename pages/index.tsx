@@ -16,8 +16,8 @@ export default function Home() {
 		</div> */}
 
 		<Flex alignItems='center' justifyContent='center' direction='column' >
-			<Image src={plaquetteRectoImg} quality={100} style={{ paddingBlock: '50px' }} />
-			<Image src={plaquetteVersoImg} quality={100} />
+			<Image alt='TBA-recto' src={plaquetteRectoImg} quality={100} style={{ paddingBlock: '50px' }} />
+			<Image alt='TBA-verso' src={plaquetteVersoImg} quality={100} />
 		</Flex>
 	</>
 }
