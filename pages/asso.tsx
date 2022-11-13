@@ -1,19 +1,19 @@
-import {SimpleGrid} from "@chakra-ui/react"
+import { SimpleGrid } from "@chakra-ui/react"
 import axios from "axios"
-import {User} from "discord.js"
-import React, {useContext} from "react"
-import {FaHeart, FaStar} from "react-icons/fa"
+import { useContext } from "react"
+import { FaHeart, FaStar } from "react-icons/fa"
 import ButtonLink from "../src/components/ButtonLink"
 import MemberList from "../src/components/tile/MemberList"
-import {ConnectedUserContext} from "../src/context/ConnectedUserContext"
+import { ConnectedUserContext } from "../src/context/ConnectedUserContext"
+import User from "../src/domain/user"
 
 export async function getServerSideProps() {
 	const res = await axios.get("https://api.brain-academy.fr/users")
-	return await {props: {data: res.data}}
+	return { props: { users: res.data } }
 }
 
-export default function Asso({data: users}: {data: {name: string, discord: User}[]}) {
-	const {connectedUser} = useContext(ConnectedUserContext)
+export default function Asso({ users }: { users: User[] }) {
+	const { connectedUser } = useContext(ConnectedUserContext)
 	return <>
 		<SimpleGrid columns={3} minChildWidth={50} maxW={500} spacing={8} m={8}>
 			<ButtonLink href="https://www.helloasso.com/associations/the-brain-academy/adhesions/adhesion-the-brain-academy" leftIcon={<FaStar />} bg="green.500" h={50}>
@@ -23,6 +23,6 @@ export default function Asso({data: users}: {data: {name: string, discord: User}
 				Faire un don
 			</ButtonLink>
 		</SimpleGrid>
-		{!!connectedUser && <MemberList data={users} />}
+		{!!connectedUser && <MemberList users={users} />}
 	</>
 }
