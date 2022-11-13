@@ -8,7 +8,7 @@ import MemberList from "../src/components/tile/MemberList"
 import {ConnectedUserContext} from "../src/context/ConnectedUserContext"
 
 export async function getServerSideProps() {
-	const res = await axios.get("http://brain-academy.fr:3001/users")
+	const res = await axios.get("https://api.brain-academy.fr/users")
 	return await {props: {data: res.data}}
 }
 

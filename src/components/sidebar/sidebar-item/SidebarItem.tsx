@@ -9,6 +9,7 @@ export default function SidebarItem(
 	return (
 		<Link href={link}>
 			<Button
+				w='100%'
 				padding={2}
 				alignItems="center"
 				borderRadius={10}

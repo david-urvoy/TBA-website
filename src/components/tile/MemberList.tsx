@@ -2,7 +2,7 @@ import {Heading, SimpleGrid, StackDivider, VStack} from "@chakra-ui/react"
 import {User} from "discord.js"
 import React from "react"
 import MemberCard from "./MemberCard"
-import Tile from "./tile"
+import Tile from "./Tile"
 
 export default function MemberList({data: users}: {data: {name: string, discord: User}[]}) {
 	return <Tile>
