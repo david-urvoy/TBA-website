@@ -5,7 +5,7 @@ import { FaHeart, FaStar } from "react-icons/fa"
 import ButtonLink from "../src/components/ButtonLink"
 import MemberList from "../src/components/tile/MemberList"
 import { ConnectedUserContext } from "../src/context/ConnectedUserContext"
-import User from "../src/domain/user"
+import User from "../src/domain/User"
 
 export async function getServerSideProps() {
 	const res = await axios.get("https://api.brain-academy.fr/users")

@@ -1,5 +1,5 @@
 import { Heading, SimpleGrid, StackDivider, VStack } from "@chakra-ui/react"
-import User from "../../domain/user"
+import User from "../../domain/User"
 import MemberCard from "./MemberCard"
 import Tile from "./Tile"
 

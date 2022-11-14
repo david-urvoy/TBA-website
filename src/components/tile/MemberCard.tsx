@@ -1,5 +1,5 @@
 import { Badge, Box, Button, useColorMode } from "@chakra-ui/react"
-import User from "../../domain/user"
+import User from "../../domain/User"
 
 export default function MemberCard({ user: { username } }: { user: User }) {
 	const { colorMode } = useColorMode()

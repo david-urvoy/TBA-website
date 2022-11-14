@@ -1,8 +1,6 @@
 import { Flex } from '@chakra-ui/react'
 import Head from 'next/head'
-import Image from 'next/image'
-import plaquetteRectoImg from '../public/images/plaquette-tba-recto.png'
-import plaquetteVersoImg from '../public/images/plaquette-tba-verso.png'
+import PageSlice from '../src/components/PageSlice'
 
 export default function Home() {
 	return <>
@@ -12,12 +10,12 @@ export default function Home() {
 			<link rel='icon' href='/brain-academy-logo.ico' />
 		</Head>
 
-		{/* <div className={styles.container}>
-		</div> */}
-
-		<Flex alignItems='center' justifyContent='center' direction='column' >
-			<Image alt='TBA-recto' src={plaquetteRectoImg} quality={100} style={{ paddingBlock: '50px' }} />
-			<Image alt='TBA-verso' src={plaquetteVersoImg} quality={100} />
+		<Flex direction='column' w='100%' overflowY='scroll' className='home'>
+			<PageSlice bgColorCaption='#4C0099' bgColorPhoto='#CC99FF' title='La TBA' caption='Venez découvrir la Brain Academy' />
+			<PageSlice bgColorCaption='#CC0000' bgColorPhoto='#FF9999' title='BOTC' caption='Venez découvrir BOTC' captionSide='RIGHT' />
+			<PageSlice bgColorCaption='#FF8000' bgColorPhoto='#FFCC99' title='Jeux de société' caption='Le pôle Jeux de société' />
+			<PageSlice bgColorCaption='#003300' bgColorPhoto='#99FF99' title='Sorties et Sport' caption='Pôle sorties et sport' captionSide='RIGHT' />
+			<PageSlice bgColorCaption='#000099' bgColorPhoto='#66B2FF' title='Escape Game' caption='Pôle Escape Game' />
 		</Flex>
 	</>
 }

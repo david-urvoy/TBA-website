@@ -1,6 +1,6 @@
 import { ArrowBackIcon, CalendarIcon, ChatIcon, EditIcon, StarIcon } from "@chakra-ui/icons"
 import React from "react"
-import User from "./domain/user"
+import User from "./domain/User"
 
 export interface NavigationItem {
 	title: string

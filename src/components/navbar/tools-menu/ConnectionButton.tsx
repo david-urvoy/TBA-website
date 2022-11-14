@@ -4,8 +4,8 @@ import axios from "axios"
 import router from "next/router"
 import { useContext, useEffect } from "react"
 import { ConnectedUserContext } from "../../../context/ConnectedUserContext"
-import User from "../../../domain/user"
-import { login, logout } from "../../../oauth/auth"
+import User from "../../../domain/User"
+import { login, logout } from "../../../oauth/Auth"
 
 const tokenUrl = 'https://discord.com/api/users/@me'
 

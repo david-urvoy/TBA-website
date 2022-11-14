@@ -1,5 +1,5 @@
 import React from "react"
-import User from "../domain/user"
+import User from "../domain/User"
 
 export const connectedUser: User = undefined
 export const setConnectedUser: (user: User) => void = undefined
