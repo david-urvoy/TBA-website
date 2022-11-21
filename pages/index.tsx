@@ -1,5 +1,7 @@
-import { Flex } from '@chakra-ui/react'
+import { Flex, Grid, GridItem, Text } from '@chakra-ui/react'
 import Head from 'next/head'
+import { Asso, Boutique, Discord, Facebook, Instagram, Meetup, Twitter } from '../src/components/buttons/SocialButton'
+import { pageHeight } from '../src/components/navbar/Navbar'
 import PageSlice from '../src/components/PageSlice'
 
 export default function Home() {
@@ -16,6 +18,18 @@ export default function Home() {
 			<PageSlice bgColorCaption='#FF8000' bgColorPhoto='#FFCC99' title='Jeux de société' caption='Le pôle Jeux de société' />
 			<PageSlice bgColorCaption='#003300' bgColorPhoto='#99FF99' title='Sorties et Sport' caption='Pôle sorties et sport' captionSide='RIGHT' />
 			<PageSlice bgColorCaption='#000099' bgColorPhoto='#66B2FF' title='Escape Game' caption='Pôle Escape Game' />
-		</Flex>
+			<Flex minH={pageHeight} direction='column' justify='space-evenly'>
+				<Text w='100%' fontSize='6xl' textAlign='center'>Rejoins nous !</Text>
+				<Grid w='100%' minH='400px' gridTemplate='"a b c" "d e f" "g g g"' justifyContent='space-evenly'>
+					<GridItem><Meetup /></GridItem>
+					<GridItem><Discord /></GridItem>
+					<GridItem><Asso /></GridItem>
+					<GridItem><Facebook /></GridItem>
+					<GridItem><Instagram /></GridItem>
+					<GridItem><Twitter /></GridItem>
+					<GridItem><Boutique /></GridItem>
+				</Grid>
+			</Flex>
+		</Flex >
 	</>
 }

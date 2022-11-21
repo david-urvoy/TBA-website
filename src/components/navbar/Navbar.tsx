@@ -20,3 +20,4 @@ export default function Navbar(props: { toggleSidebar: () => void }) {
 	)
 }
 
+export const pageHeight = 'calc(100vh - 60px)'
