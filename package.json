@@ -9,21 +9,20 @@
 		"export": "next export -p 8080"
 	},
 	"dependencies": {
-		"@chakra-ui/icons": "",
-		"@chakra-ui/react": "",
-		"@emotion/react": "",
-		"@emotion/styled": "",
-		"axios": "",
-		"discord.js": "",
-		"next": "",
-		"react": "",
-		"react-dom": "",
-		"react-icons": "",
-		"sass": ""
+		"@chakra-ui/icons": "^2.0.13",
+		"@chakra-ui/react": "^2.4.3",
+		"@emotion/react": "^11.10.5",
+		"@emotion/styled": "^11.10.5",
+		"axios": "^1.2.1",
+		"discord.js": "^14.7.1",
+		"next": "^13.0.7",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-icons": "^4.7.1"
 	},
 	"devDependencies": {
-		"@types/node": "",
-		"@types/react": "",
-		"typescript": ""
+		"@types/node": "^18.11.15",
+		"@types/react": "^18.0.26",
+		"typescript": "^4.9.4"
 	}
 }
