@@ -1,4 +1,4 @@
-import {ChakraProvider, Flex} from '@chakra-ui/react'
+import {Box, ChakraProvider, Flex} from '@chakra-ui/react'
 import {useState} from 'react'
 import Navbar from '../src/components/navbar/Navbar'
 import Sidebar from '../src/components/sidebar/Sidebar'
@@ -18,7 +18,9 @@ export default function Website({Component, pageProps}) {
 			<Flex direction="column" h='100%'>
 				<Navbar toggleSidebar={toggleSidebar} />
 				<Sidebar isOpen={isSidebarOpen} closeSidebar={closeSidebar} />
-				<Component {...pageProps} />
+				<Box overflowY='auto'>
+					<Component {...pageProps} />
+				</Box>
 			</Flex>
 		</ConnectedUserContext.Provider>
 	</ChakraProvider>
