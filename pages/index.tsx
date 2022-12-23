@@ -1,8 +1,8 @@
 import {StackDivider, VStack} from '@chakra-ui/react'
 import Head from 'next/head'
 import PageSlice from '../src/components/PageSlice'
-import PartnersPage from '../src/components/tile/partner/PartnersPage'
-import SocialMediaPage from '../src/components/tile/social/SocialMediaPage'
+import PartnersPage from '../src/components/partner/PartnersPage'
+import SocialMediaPage from '../src/components/social/SocialMediaPage'
 
 export default function Home() {
 	return <>

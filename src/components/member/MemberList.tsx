@@ -1,7 +1,7 @@
 import {Heading, SimpleGrid, StackDivider, VStack} from "@chakra-ui/react"
-import User from "../../../domain/User"
+import User from "../../domain/User"
+import Tile from "../tile/Tile"
 import MemberCard from "./MemberCard"
-import Tile from "../Tile"
 
 export default function MemberList({users}: {users: User[]}) {
 	return <Tile>

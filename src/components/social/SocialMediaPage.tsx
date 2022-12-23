@@ -1,6 +1,6 @@
 import {Center, Flex, Grid, GridItem, Text} from "@chakra-ui/react"
-import {Asso, Boutique, Discord, Facebook, Instagram, Meetup, Twitter} from "../../link/SocialLink"
-import {pageHeight} from "../../navbar/Navbar"
+import {Asso, Boutique, Discord, Facebook, Instagram, Meetup, Twitter} from "../core/link/SocialLink"
+import {pageHeight} from "../core/navbar/Navbar"
 
 export default function SocialMediaPage() {
 	return <Flex minH={pageHeight} direction='column' justify='space-evenly'>

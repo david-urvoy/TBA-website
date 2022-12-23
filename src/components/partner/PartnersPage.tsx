@@ -1,5 +1,5 @@
 import {Box, Heading, SimpleGrid} from '@chakra-ui/react'
-import {pageHeight} from '../../navbar/Navbar'
+import {pageHeight} from '../core/navbar/Navbar'
 import PartnerCard from './PartnerCard'
 
 export default function PartnersPage() {

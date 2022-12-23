@@ -1,7 +1,7 @@
 import {Box, ChakraProvider, Flex} from '@chakra-ui/react'
 import {useState} from 'react'
-import Navbar from '../src/components/navbar/Navbar'
-import Sidebar from '../src/components/sidebar/Sidebar'
+import Navbar from '../src/components/core/navbar/Navbar'
+import Sidebar from '../src/components/core/sidebar/Sidebar'
 import {ConnectedUserContext} from '../src/context/ConnectedUserContext'
 import '../styles/globals.css'
 

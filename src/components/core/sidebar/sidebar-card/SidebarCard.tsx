@@ -1,7 +1,7 @@
 import {Flex, useColorMode} from "@chakra-ui/react"
-import React, {useContext} from "react"
-import {ConnectedUserContext} from "../../../context/ConnectedUserContext"
-import UserIcon from "../../UserIcon"
+import {useContext} from "react"
+import {ConnectedUserContext} from "../../../../context/ConnectedUserContext"
+import UserIcon from "../../../UserIcon"
 
 export default function SidebarCard() {
 	const {connectedUser} = useContext(ConnectedUserContext)

@@ -1,7 +1,7 @@
 import {Box, Button} from "@chakra-ui/react"
-import React, {ReactElement} from "react"
-import {NavigationItem} from "../../../NavigationItems"
 import Link from "next/link"
+import {ReactElement} from "react"
+import {NavigationItem} from "../../../../NavigationItems"
 
 export default function SidebarItem(
 	{item: {title, icon, link}, closeSidebar}: {item: NavigationItem, closeSidebar: () => void}

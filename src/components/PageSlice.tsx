@@ -1,5 +1,5 @@
 import {Box, Flex, Text} from '@chakra-ui/react'
-import {pageHeight} from './navbar/Navbar'
+import {pageHeight} from './core/navbar/Navbar'
 
 export default function PageSlice({bgColorCaption, title, caption, captionSide = 'LEFT', bgColorPhoto}: {bgColorCaption: string, title: string, caption: string, captionSide?: 'LEFT' | 'RIGHT', bgColorPhoto: string}) {
 	return <Flex minH={pageHeight} bgColor={bgColorPhoto}>
