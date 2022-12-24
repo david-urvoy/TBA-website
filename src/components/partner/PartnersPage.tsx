@@ -1,9 +1,13 @@
 import {Box, Heading, SimpleGrid} from '@chakra-ui/react'
-import {pageHeight} from '../core/navbar/Navbar'
+import {useContext} from 'react'
+import {WindowHeightContext} from '../../context/PageHeightContext'
 import PartnerCard from './PartnerCard'
 
 export default function PartnersPage() {
-	return <Box marginInline='50px' minH={pageHeight}>
+
+	const {windowHeight} = useContext(WindowHeightContext)
+
+	return <Box paddingInline='50px' minH={windowHeight} bg='linear-gradient(0deg, purple, rgb(27, 32, 43) 70%)'>
 		<Heading marginY='20px'>Nos Partenaires :</Heading>
 		<SimpleGrid templateColumns='repeat(auto-fit, 600px)' justifyContent='space-evenly' spacing='3%'>
 			<PartnerCard

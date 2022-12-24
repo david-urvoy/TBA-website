@@ -8,4 +8,5 @@ const theme = extendTheme({
 	config,
 	media: "lg"
 })
+
 export default theme
