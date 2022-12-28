@@ -1,4 +1,4 @@
-import {Box, Heading, SimpleGrid} from '@chakra-ui/react'
+import {Box, Flex, Heading} from '@chakra-ui/react'
 import {useContext} from 'react'
 import {WindowHeightContext} from '../../context/PageHeightContext'
 import PartnerCard from './PartnerCard'
@@ -7,9 +7,9 @@ export default function PartnersPage() {
 
 	const {windowHeight} = useContext(WindowHeightContext)
 
-	return <Box paddingInline='50px' minH={windowHeight} bg='linear-gradient(0deg, purple, rgb(27, 32, 43) 70%)'>
-		<Heading marginY='20px'>Nos Partenaires :</Heading>
-		<SimpleGrid templateColumns='repeat(auto-fit, 600px)' justifyContent='space-evenly' spacing='3%'>
+	return <Box minH={windowHeight} bg='linear-gradient(0deg, purple, rgb(27, 32, 43) 70%)'>
+		<Heading marginY='20px' marginLeft='20px'>Nos Partenaires :</Heading>
+		<Flex justifyContent='space-evenly' wrap='wrap'>
 			<PartnerCard
 				name='Game Spirit'
 				colorTheme='lightblue'
@@ -40,6 +40,6 @@ export default function PartnersPage() {
 				websiteUrl='https://www.reperes-lyon.fr/'
 				iframeUrl='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44529.97971032466!2d4.76231105820312!3d45.768710500000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eafe7bd3cde7%3A0xbc6e582dc223efe0!2sLe%20Repaire!5e0!3m2!1sfr!2sfr!4v1671377313250!5m2!1sfr!2sfr'
 			/>
-		</SimpleGrid>
+		</Flex>
 	</Box>
 }

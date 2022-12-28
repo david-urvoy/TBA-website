@@ -1,4 +1,4 @@
-import {Box, Center, Flex, StackDivider, VStack} from '@chakra-ui/react'
+import {Center, Flex, StackDivider, VStack} from '@chakra-ui/react'
 import Head from 'next/head'
 import {useContext} from 'react'
 import PageSlice from '../src/components/PageSlice'
@@ -6,7 +6,7 @@ import PartnersPage from '../src/components/partner/PartnersPage'
 import SocialMediaPage from '../src/components/social/SocialMediaPage'
 import {WindowHeightContext} from '../src/context/PageHeightContext'
 
-export default function Home({scrollTop, scrollHeight}: {scrollTop: number, scrollHeight: number}) {
+export default function Home({scrollTop}: {scrollTop: number}) {
 
 	const {windowHeight} = useContext(WindowHeightContext)
 
@@ -29,7 +29,7 @@ export default function Home({scrollTop, scrollHeight}: {scrollTop: number, scro
 						css={{
 							fontFamily: 'fantasy',
 							fontWeight: 'bold',
-							fontSize: scrollTop / 50 + 'px',
+							fontSize: `${scrollTop / 100}px`,
 							color: 'red'
 						}} >
 						Rejoins nous !

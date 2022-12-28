@@ -1,17 +1,24 @@
-import {Card, CardBody, CardHeader, Center, Divider, Flex, Heading, Image, Link, StackDivider, VStack} from '@chakra-ui/react'
+import {Box, Card, CardBody, CardHeader, Center, Divider, Flex, Heading, Image, Link, StackDivider, VStack} from '@chakra-ui/react'
 import * as CSS from 'csstype'
+import {useEffect, useRef, useState} from 'react'
 import PartnerCardLabel from './PartnerCardLabel'
 
 export default function PartnerCard({name, address, colorTheme = '', backgroundTheme = '', description = '', iconUrl, websiteUrl = '', iframeUrl}
 	: {name: string, address: string, colorTheme?: CSS.Property.Color, backgroundTheme?: CSS.Property.Color, description?: string, iconUrl: string, websiteUrl?: string, iframeUrl: string}) {
-	return <Card backgroundColor={backgroundTheme || null}>
+
+	const logoRef = useRef(null)
+	const [logoWidth, setLogoWidth] = useState(0)
+	useEffect(() => setLogoWidth(logoRef.current['clientWidth']))
+
+	return <Card backgroundColor={backgroundTheme || null} marginBottom='20px'>
 		<CardHeader>
-			<Center>
-				<Image src={iconUrl} loading='lazy' h='60px' pos='absolute' style={{left: '15px'}} />
+			<Flex justify='space-around' wrap='wrap'>
+				<Image src={iconUrl} loading='lazy' h='60px' ref={logoRef} style={{left: '15px'}} />
 				<Heading color={colorTheme}>
 					{name}
 				</Heading>
-			</Center>
+				<Box w={logoWidth} />
+			</Flex>
 		</CardHeader>
 		<Divider />
 		<CardBody>
@@ -26,7 +33,7 @@ export default function PartnerCard({name, address, colorTheme = '', backgroundT
 					}
 				</VStack>
 				<Flex alignItems='end'>
-					<iframe src={iframeUrl} width='100%' height='350px' style={{border: '0'}} loading='lazy'></iframe>
+					<iframe src={iframeUrl} width='600px' height='350px' style={{border: '0'}} loading='lazy'></iframe>
 				</Flex>
 			</VStack>
 		</CardBody>

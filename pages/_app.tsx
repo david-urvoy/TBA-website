@@ -38,7 +38,6 @@ export default function Website({Component, pageProps}) {
 							overflowY='auto'
 							bg='url("/images/TBA.png")' bgPos='center' bgRepeat='no-repeat' bgSize='max(40vh, 40vw)'
 							animation={`${PulseAnimation} 3s linear infinite`}
-
 						/>
 					</Box>
 				</Flex>
