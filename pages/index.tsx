@@ -1,15 +1,11 @@
 import {Center, Flex, StackDivider, VStack} from '@chakra-ui/react'
 import Head from 'next/head'
-import {useContext} from 'react'
+import {WindowHeight} from '../src/components/core/navbar/Navbar'
 import PageSlice from '../src/components/PageSlice'
 import PartnersPage from '../src/components/partner/PartnersPage'
 import SocialMediaPage from '../src/components/social/SocialMediaPage'
-import {WindowHeightContext} from '../src/context/PageHeightContext'
 
 export default function Home({scrollTop}: {scrollTop: number}) {
-
-	const {windowHeight} = useContext(WindowHeightContext)
-
 	return <>
 		<Head>
 			<title>Brain Academy</title>
@@ -23,7 +19,7 @@ export default function Home({scrollTop}: {scrollTop: number}) {
 			<PageSlice colorTheme={{bgColorCaption1: '#ff00a0', bgColorCaption2: '#120458'}} bgColorPhoto='#FFCC99' title='Jeux de société' caption='Le pôle Jeux de société' />
 			<PageSlice colorTheme={{bgColorCaption1: '#ff00a0', bgColorCaption2: '#120458'}} bgColorPhoto='#99FF99' title='Sorties et Sport' caption='Pôle sorties et sport' captionSide='RIGHT' />
 			<PageSlice colorTheme={{bgColorCaption1: '#ff00a0', bgColorCaption2: '#120458'}} bgColorPhoto='#66B2FF' title='Escape Game' caption='Pôle Escape Game' />
-			<Flex direction='column' h={windowHeight} justify='end'>
+			<Flex direction='column' h={WindowHeight} justify='end'>
 				<Center bottom='30%'>
 					<label
 						css={{

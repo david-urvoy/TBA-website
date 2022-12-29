@@ -1,13 +1,9 @@
 import {Box, Flex, Heading} from '@chakra-ui/react'
-import {useContext} from 'react'
-import {WindowHeightContext} from '../../context/PageHeightContext'
+import {WindowHeight} from '../core/navbar/Navbar'
 import PartnerCard from './PartnerCard'
 
 export default function PartnersPage() {
-
-	const {windowHeight} = useContext(WindowHeightContext)
-
-	return <Box minH={windowHeight} bg='linear-gradient(0deg, purple, rgb(27, 32, 43) 70%)'>
+	return <Box minH={WindowHeight} bg='linear-gradient(0deg, purple, rgb(27, 32, 43) 70%)'>
 		<Heading marginY='20px' marginLeft='20px'>Nos Partenaires :</Heading>
 		<Flex justifyContent='space-evenly' wrap='wrap'>
 			<PartnerCard

@@ -1,14 +1,8 @@
 import {HamburgerIcon} from '@chakra-ui/icons'
 import {Flex, Spacer} from '@chakra-ui/react'
-import {useContext, useEffect} from 'react'
-import {WindowHeightContext} from '../../../context/PageHeightContext'
 import ToolsMenu from './tools-menu/ToolsMenu'
 
 export default function Navbar(props: {toggleSidebar: () => void}) {
-
-	const {setWindowHeight} = useContext(WindowHeightContext)
-	useEffect(() => setWindowHeight(window.innerHeight - 60))
-
 	return (
 		<Flex
 			justify="space-between"
@@ -24,3 +18,5 @@ export default function Navbar(props: {toggleSidebar: () => void}) {
 		</Flex>
 	)
 }
+
+export const WindowHeight = 'calc(100vh - 60px)'
