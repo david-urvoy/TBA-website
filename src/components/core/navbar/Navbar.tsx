@@ -18,5 +18,3 @@ export default function Navbar(props: {toggleSidebar: () => void}) {
 		</Flex>
 	)
 }
-
-export const WindowHeight = 'calc(100vh - 60px)'

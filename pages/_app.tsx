@@ -1,6 +1,6 @@
+import {HamburgerIcon} from '@chakra-ui/icons'
 import {Box, ChakraProvider, Flex, keyframes} from '@chakra-ui/react'
-import {SyntheticEvent, useEffect, useRef, useState} from 'react'
-import Navbar from '../src/components/core/navbar/Navbar'
+import {SyntheticEvent, useEffect, useState} from 'react'
 import Sidebar from '../src/components/core/sidebar/Sidebar'
 import {ConnectedUserContext} from '../src/context/ConnectedUserContext'
 import '../styles/globals.css'
@@ -12,32 +12,28 @@ export default function Website({Component, pageProps}) {
 	const [scrollTop, setScrollTop] = useState(0)
 	const [scrollHeight, setScrollHeight] = useState(0)
 
-	const mainComponentRef = useRef(null)
-
-	useEffect(() => setScrollHeight(mainComponentRef.current.scrollHeight), [mainComponentRef])
+	useEffect(() => setScrollHeight(document.documentElement.scrollHeight), [])
+	useEffect(() => window.addEventListener('scroll', () => setScrollTop(window.scrollY)))
 
 	const toggleSidebar = () => setSidebarOpen(!isSidebarOpen)
 	const closeSidebar = () => setSidebarOpen(false)
 
 	return <ChakraProvider>
 		<ConnectedUserContext.Provider value={{connectedUser, setConnectedUser}}>
-			<Flex direction="column" h='100%'>
-				<Navbar toggleSidebar={toggleSidebar} />
+			<Flex direction="column" onScroll={({currentTarget: {scrollTop}}: SyntheticEvent<HTMLElement, Event>) => setScrollTop(scrollTop)}>
 				<Sidebar isOpen={isSidebarOpen} closeSidebar={closeSidebar} />
-				<Box overflowY='auto' ref={mainComponentRef} onScroll={({currentTarget: {scrollTop}}: SyntheticEvent<HTMLElement, Event>) => setScrollTop(scrollTop)}>
+				<Box>
 					<Component {...pageProps} scrollTop={scrollTop} scrollHeight={scrollHeight} />
-					<Box
-						pos='absolute'
-						h='100%'
-						top={0}
-						zIndex={-10}
-						w='100%'
-						overflowY='auto'
-						bg='url("/images/TBA.png")' bgPos='center' bgRepeat='no-repeat' bgSize='max(40vh, 40vw)'
-						animation={`${PulseAnimation} 3s linear infinite`}
-					/>
 				</Box>
 			</Flex>
+			<Flex pos='fixed' justify='end' bgColor='purple' align='end' w={20} h={20} borderRadius={20} zIndex={10} padding={2} top={-10} left={-10}>
+				<HamburgerIcon w={8} h={8} style={{cursor: "pointer"}} onClick={toggleSidebar} />
+			</Flex>
+			<Box
+				pos='fixed' h='100%' top={0} zIndex={-10} w='100%'
+				bg='url("/images/TBA.png")' bgPos='center' bgRepeat='no-repeat' bgSize='max(40vh, 40vw)'
+				animation={`${PulseAnimation} 3s linear infinite`}
+			/>
 		</ConnectedUserContext.Provider>
 	</ChakraProvider>
 }
