@@ -10,14 +10,12 @@ export default function PartnerCard({name, address, colorTheme = '', backgroundT
 	const [logoWidth, setLogoWidth] = useState(0)
 	useEffect(() => setLogoWidth(logoRef.current['clientWidth']))
 
-	return <Card backgroundColor={backgroundTheme || null} margin='20px'>
+	return <Card backgroundColor={backgroundTheme} margin='20px' flex='1 1 auto' w={550} maxW={600}>
 		<CardHeader>
-			<Flex justify='space-around' wrap='wrap'>
-				<Image src={iconUrl} loading='lazy' h='60px' ref={logoRef} style={{left: '15px'}} />
-				<Heading color={colorTheme}>
-					{name}
-				</Heading>
-				<Box w={logoWidth} />
+			<Flex justify='space-around' wrap='nowrap'>
+				<Image id='logo' src={iconUrl} loading='lazy' h='60px' ref={logoRef} style={{left: '15px'}} />
+				<Heading color={colorTheme} textAlign='center'>{name}</Heading>
+				<Box minW={logoWidth} />
 			</Flex>
 		</CardHeader>
 		<Divider />
@@ -33,11 +31,7 @@ export default function PartnerCard({name, address, colorTheme = '', backgroundT
 					}
 				</VStack>
 				<Flex alignItems='end'>
-					<iframe src={iframeUrl} css={{
-						border: '0'
-						, width: '100%'
-						, height: '350px'
-					}} loading='lazy'></iframe>
+					<iframe src={iframeUrl} css={{border: '0', width: '100%', height: '350px'}} loading='lazy' />
 				</Flex>
 			</VStack>
 		</CardBody>
