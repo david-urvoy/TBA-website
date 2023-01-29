@@ -33,7 +33,7 @@ export default function PartnersPage() {
 				address='2 Rue Camille Jordan, 69001 Lyon'
 				iconUrl='https://static.wixstatic.com/media/9df12a_1044e87962a6463b990e511a1313a252~mv2.png/v1/fill/w_530,h_168,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/9df12a_1044e87962a6463b990e511a1313a252~mv2.png'
 				websiteUrl='https://www.reperes-lyon.fr/'
-				iframeUrl='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44529.97971032466!2d4.76231105820312!3d45.768710500000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eafe7bd3cde7%3A0xbc6e582dc223efe0!2sLe%20Repaire!5e0!3m2!1sfr!2sfr!4v1671377313250!5m2!1sfr!2sfr'
+				iframeUrl='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2783.0021380958838!2d4.8319484!3d45.7711474!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb3a52a6cb2d%3A0x9c8a1bd675d10b35!2sRep%C3%A8re(s)!5e0!3m2!1sfr!2sfr!4v1674992273671!5m2!1sfr!2sfr'
 			/>
 		</Flex>
 	</Box>
